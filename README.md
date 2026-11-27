@@ -1,4 +1,4 @@
-<p align="center"><img src="imagens/alumia.jpg" width="100" alt="Marca da Alumia"></p>
+![Alumia — Aprenda a programar em português. Caderno aberto com o símbolo da linguagem e um lápis verde e amarelo.](imagens/capa-alumia.webp)
 
 # Alumia · Programação em português
 
