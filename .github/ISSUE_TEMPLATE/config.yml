@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Segurança e relatos de vulnerabilidade
+    url: https://github.com/alumia-brasil/alumia-br/blob/main/SECURITY.md
+    about: Leia as orientações antes de compartilhar informações de segurança.
+  - name: Guia da linguagem
+    url: https://github.com/alumia-brasil/alumia-br/blob/main/LINGUAGEM.md
+    about: Sintaxe, tipos, funções prontas e limites atuais.

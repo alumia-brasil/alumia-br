@@ -1,0 +1,7 @@
+funcao principal() {
+    decimal numero = 1 / 3
+    retorna(numero)
+}
+
+escreval(principal())
+escreval("abc")

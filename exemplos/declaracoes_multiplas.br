@@ -1,0 +1,9 @@
+inteiro largura = 10, altura = 20, profundidade = 5
+decimal preco = 19.90, desconto = 2.50
+texto nome = "Ana", cidade = "Recife"
+booleano ativo = verdadeiro, aprovado = falso
+
+escreval("Volume: ", largura * altura * profundidade)
+escreval("Preço com desconto: ", preco - desconto)
+escreval(nome, " mora em ", cidade)
+escreval("Ativo: ", ativo, " | Aprovado: ", aprovado)

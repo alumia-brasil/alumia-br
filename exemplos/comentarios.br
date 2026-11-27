@@ -1,0 +1,10 @@
+// Comentário de uma linha
+funcao principal() {
+    /*
+     Comentário
+     de várias linhas
+    */
+    inteiro n = 42 // no fim da linha
+    escreval("ok")
+    escreval(n)
+}

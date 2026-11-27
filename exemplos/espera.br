@@ -1,0 +1,4 @@
+inteiro abc = sorteia(1, 20)
+
+espera(abc)
+escreval("Terminei de esperar!")

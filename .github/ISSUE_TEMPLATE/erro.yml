@@ -1,0 +1,57 @@
+name: Relatar um erro
+description: Algo não funcionou como esperado na linguagem ou na IDE.
+title: "[Erro] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Compartilhe um exemplo pequeno e remova dados pessoais. Para vulnerabilidades, siga SECURITY.md e não publique detalhes aqui.
+  - type: textarea
+    id: problema
+    attributes:
+      label: O que aconteceu?
+      description: Conte o que você tentou fazer e qual resultado esperava.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduzir
+    attributes:
+      label: Como reproduzir
+      description: Liste os passos e informe se usou Executar, Compilar ou o terminal.
+    validations:
+      required: true
+  - type: textarea
+    id: codigo
+    attributes:
+      label: Código de exemplo
+      description: Se possível, inclua um programa .br completo e pequeno.
+      render: text
+  - type: textarea
+    id: saida
+    attributes:
+      label: Saída ou mensagem de erro
+      render: text
+  - type: dropdown
+    id: sistema
+    attributes:
+      label: Sistema operacional
+      options:
+        - macOS Apple Silicon
+        - macOS Intel
+        - Windows
+        - Linux
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão ou commit
+      description: Informe também a versão do sistema, se souber. Se não souber a versão da Alumia, escreva "não sei".
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: Capturas e detalhes que ajudem a entender o problema, sem informações privadas.

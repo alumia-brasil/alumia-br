@@ -1,0 +1,28 @@
+name: Sugerir uma melhoria
+description: Uma ideia para a linguagem, a IDE ou os materiais de aprendizado.
+title: "[Ideia] "
+body:
+  - type: textarea
+    id: necessidade
+    attributes:
+      label: Que dificuldade você quer resolver?
+      description: Explique a situação e quem se beneficiaria da mudança.
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Como você imagina a solução?
+      description: Um exemplo de código ou de uso da IDE ajuda bastante.
+    validations:
+      required: true
+  - type: textarea
+    id: aprendizado
+    attributes:
+      label: Como isso ajuda no aprendizado?
+      description: Pense em clareza, acessibilidade, exercícios e dificuldade para iniciantes.
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas e dúvidas
+      description: Outras formas de resolver o problema e pontos que ainda precisam ser discutidos.

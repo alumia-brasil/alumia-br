@@ -1,0 +1,9 @@
+escreval(minusculo("OLÁ, BRASIL!"))
+
+lista<decimal> notas = [7, 8.5, 10]
+escreval("Menor nota: ", minimo(notas))
+escreval("Maior nota: ", maximo(notas))
+
+inteiro dado = sorteia(1, 6)
+escreval("Dado: ", dado)
+escreval("De -10 até 10: ", sorteia(-10, 10))

@@ -1,0 +1,15 @@
+inteiro idade = 18
+texto categoria = idade >= 18 ? "adulto" : "menor de idade"
+escreval(categoria)
+idade >= 18 ? escreval("Você é maior de idade") : escreval("Você é menor de idade")
+
+inteiro nota = 8
+escreval(nota >= 7 ? "aprovado" : nota >= 5 ? "recuperação" : "reprovado")
+
+// Somente o ramo escolhido é avaliado.
+inteiro divisor = 0
+escreval(divisor != 0 ? 10 / divisor : 0)
+
+// O contexto decimal preserva a parte fracionária.
+decimal metade = verdadeiro ? 1 / 2 : 0
+escreval(metade)

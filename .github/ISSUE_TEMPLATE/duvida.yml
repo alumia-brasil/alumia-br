@@ -1,0 +1,26 @@
+name: Tirar uma dúvida
+description: Ajuda para entender a linguagem ou usar a IDE.
+title: "[Dúvida] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pessoas iniciantes são bem-vindas. Veja também o README, LINGUAGEM.md e o menu Documentação da IDE.
+  - type: textarea
+    id: pergunta
+    attributes:
+      label: Qual é a sua dúvida?
+      description: Conte o que está tentando fazer e o que já experimentou.
+    validations:
+      required: true
+  - type: textarea
+    id: codigo
+    attributes:
+      label: Código ou exemplo
+      description: Remova dados pessoais antes de compartilhar.
+      render: text
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Sistema operacional, versão da Alumia e se está usando a IDE ou o terminal, caso sejam relevantes.

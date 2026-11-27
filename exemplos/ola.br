@@ -1,0 +1,6 @@
+funcao principal() {
+    texto nome = "Brasil"
+    inteiro numero = 10 + 20
+    escreval("Olá ", nome)
+    escreval(numero)
+}

@@ -1,0 +1,5 @@
+// A pasta publico fica ao lado deste programa.
+// Na IDE, Executar inicia o servidor; Parar encerra.
+rota.get("/")
+rota.get("/sobre")
+servidor_http(8080, "publico")

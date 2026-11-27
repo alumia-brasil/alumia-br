@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meu primeiro site com Alumia</title>
+    <link rel="stylesheet" href="/estaticos/css/estilo.css">
+    <script src="/estaticos/scripts/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <img src="/estaticos/imagens/sol.svg" alt="" width="64" height="64">
+        <p class="etiqueta">FEITO COM ALUMIA</p>
+        <h1>Meu primeiro site com Alumia</h1>
+        <p>O HTML organiza, o CSS dá estilo e o JavaScript responde aos seus cliques.</p>
+        <form id="saudacao">
+            <label for="nome">Como você se chama?</label>
+            <div class="campos">
+                <input id="nome" name="nome" placeholder="Seu nome" maxlength="80" autocomplete="given-name" required>
+                <button type="submit">Dizer olá</button>
+            </div>
+        </form>
+        <p id="mensagem" role="status">Seu servidor Alumia está funcionando.</p>
+        <p class="dica">Mude o título e salve na IDE. Veja a página atualizar sozinha.</p>
+        <a href="/sobre/">Quem somos</a>
+    </main>
+</body>
+</html>

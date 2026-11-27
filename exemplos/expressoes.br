@@ -1,0 +1,14 @@
+funcao principal() {
+    inteiro a = 2 + 3 * 4
+    inteiro b = (2 + 3) * 4
+    inteiro c = 10 / 2
+    inteiro d = 10 % 3
+    inteiro neg = -5 + 3
+    decimal x = 1.5 + 2.25
+    escreval(a)
+    escreval(b)
+    escreval(c)
+    escreval(d)
+    escreval(neg)
+    escreval(x)
+}
