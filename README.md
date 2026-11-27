@@ -1,84 +1,70 @@
-![Alumia — Aprenda a programar em português. Caderno aberto com o símbolo da linguagem e um lápis verde e amarelo.](imagens/capa-alumia.webp)
+<h1 align="center">
+  <img src="imagens/capa-alumia.webp" alt="Alumia — Aprenda a programar em português. Caderno aberto com o símbolo da linguagem e um lápis verde e amarelo.">
+</h1>
 
-# Alumia · Programação em português
+<p align="center"><strong>Uma linguagem brasileira para escrever jogos, fazer contas e servir páginas web.</strong><br>
+Editor, terminal, compilador e documentação vêm juntos. Dá para estudar offline desde a primeira aula.</p>
 
-**Uma linguagem de programação e uma IDE para quem está começando.** Escreva `leia` para fazer uma pergunta, `se` para tomar uma decisão e `escreval` para mostrar o resultado. Quando algo dá errado, a IDE explica o problema em português e aponta o trecho do programa.
+<p align="center">
+  <a href="#baixe-para-seu-computador"><img src="https://img.shields.io/badge/Baixar_a_IDE-185540?style=for-the-badge" alt="Baixar a IDE"></a>
+  <a href="https://github.com/alumia-brasil/alumia-br/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/Baixar_os_exemplos-725117?style=for-the-badge" alt="Baixar os exemplos em ZIP"></a>
+</p>
+<p align="center"><a href="#seu-primeiro-programa">Primeiro programa</a> · <a href="#projetos-para-o-terminal">Jogos e exercícios</a> · <a href="#sites-para-abrir-no-navegador">Galeria de sites</a> · <a href="LINGUAGEM.md">Referência da linguagem</a></p>
 
-A Alumia foi pensada para que a primeira aula comece com código. O editor, o executor, o compilador e a documentação vêm no mesmo aplicativo. Depois de baixar a IDE e os exemplos, dá para aprender e compilar offline, sem instalar C, Node.js ou Zig à parte.
+<a name="seu-primeiro-programa"></a>
 
-**[Baixar a IDE](#baixe-para-seu-computador)** · **[Baixar os exemplos em ZIP](https://github.com/alumia-brasil/alumia-br/archive/refs/heads/main.zip)** · **[Consultar a linguagem](LINGUAGEM.md)**
+## Quem paga o último centavo?
 
-[Primeiro programa](#seu-primeiro-programa) · [Conheça a IDE](#conheça-a-ide) · [Jogos e programas](#escolha-um-projeto-para-abrir-agora) · [Projetos web](#faça-um-site-rodar-no-navegador)
+O almoço deu R$ 100. A mesa deixou 10% de gorjeta. Três pessoas vão dividir R$ 110. Se cada uma pagar R$ 36,67, a mesa paga R$ 110,01. Como um programa resolve isso?
 
-## Baixe para seu computador
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="imagens/racha-conta.webp">
+  <img src="imagens/racha-conta.gif" alt="Execução do racha-conta. Com R$ 100, gorjeta de 10% e três pessoas, duas pagam R$ 36,67 e uma paga R$ 36,66.">
+</picture>
 
-| Sistema | Alumia 0.1.0 | Como começar |
-| --- | --- | --- |
-| **Windows x64** | [Baixar o instalador .exe](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-Setup.exe) | Execute o instalador e abra **Alumia** pelo menu Iniciar. |
-| **macOS 14 ou posterior** | [Chip Apple M](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-macOS-arm64.zip) · [Processador Intel](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-macOS-x64.zip) | Confira o chip em **Sobre Este Mac**. Extraia o ZIP e mova o aplicativo para **Aplicativos**. |
-| **Linux x64** | [Baixar o pacote .tar.gz](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-Linux-x64.tar.gz) | Extraia a pasta inteira e execute `./br-ide` dentro dela em uma sessão gráfica. |
+**Rode essa conta.** Extraia o ZIP dos exemplos, abra `exemplos/racha_conta.br` em **Arquivo → Abrir** e aperte **F5**. No Terminal, digite `100`, `10` e `3`, uma resposta por vez. Depois experimente com quatro pessoas. [Ver o programa completo](exemplos/racha_conta.br) · [Ver a demonstração sem animação](imagens/racha-conta.webp)
 
-**Sobre a primeira abertura.** O instalador do Windows ainda está sem assinatura de editor. No macOS, a versão usa assinatura ad hoc e aguarda notarização. O Gatekeeper bloqueou a abertura no teste com macOS 27.3. A execução em Mac Intel ainda precisa de validação. O guia inclui as instruções de Homebrew e a verificação do download por SHA-256. [Guia de instalação](docs/instalacao.md) · [Arquivos da versão](https://github.com/alumia-brasil/alumia-br/releases/latest)
-
-## Seu primeiro programa
-
-Uma oficina tem 20 lugares e 17 inscritos. Quantos lugares sobraram? Em **Arquivo → Novo**, substitua o conteúdo do editor por este programa e pressione **F5**.
+O truque está em dividir **centavos inteiros**. Você pode isolar a ideia em **Arquivo → Novo** e executar estas quatro linhas.
 
 ```br
-inteiro capacidade = 20
-inteiro inscritos = 17
-
-escreval("Vagas livres: ", capacidade - inscritos)
+inteiro centavos = 11000
+inteiro pessoas = 3
+escreval("Centavos por pessoa: ", centavos / pessoas)
+escreval("Centavos que sobram: ", centavos % pessoas)
 ```
 
-O **Terminal** mostra `Vagas livres: 3`. Mude `17` para `20` e rode de novo. O mesmo programa agora mostra `Vagas livres: 0`. Para experimentar uma pergunta pelo teclado, abra **Par ou ímpar**, execute e digite `7` no Terminal. [Código da oficina](exemplos/oficina/vagas.br) · [Par ou ímpar](exemplos/par_ou_impar.br)
+Cada pessoa começa com `3666` centavos. O resto é `2`, então duas pessoas pagam um centavo a mais. As três parcelas somam exatamente R$ 110,00.
 
-## Conheça a IDE
+<a name="escolha-um-projeto-para-abrir-agora"></a>
 
-![IDE da Alumia em tema escuro, com um programa no editor, o botão Executar e o painel inferior com quatro abas](imagens/ide-macos.jpg)
+## Projetos para o Terminal
 
-| O que você quer fazer | Onde acontece |
+| Abra com F5 | Faça uma mudança e veja o que acontece |
 | --- | --- |
-| **Escrever e experimentar** | Digite `esc` e use **Tab** para aceitar uma sugestão. **F5** executa o texto do editor, inclusive antes de salvar. Responda a `leia()` no **Terminal**. |
-| **Entender um erro** | Abra **Problemas** e clique na mensagem em português para voltar ao trecho sublinhado. Uma falha durante a execução aparece no **Terminal**, junto da saída. |
-| **Gerar um executável** | Em **Compilar**, escolha o nome e a pasta. A IDE salva o binário e o `.br` juntos. O binário roda fora da IDE em computadores do mesmo sistema e arquitetura. |
-| **Estudar no seu ritmo** | O menu **Documentação** reúne 52 exemplos copiáveis em 16 assuntos. Em **Exibir**, ajuste separadamente as fontes do editor e do Terminal. A IDE lembra o tamanho e o tema escolhidos. |
+| [**Adivinhe o número**](exemplos/adivinhacao.br) | Dê um palpite entre 1 e 100. Use a pista *maior* ou *menor* para escolher o próximo e descubra onde o `enquanto` termina. |
+| [**Calculadora**](exemplos/calculadora.br) | Experimente `3 / 2` e depois `3 / 0`. A primeira conta devolve `1.5`. A segunda aciona a mensagem de divisão por zero. |
+| [**Quiz das capitais**](exemplos/quiz_capitais.br) | Responda `BELÉM` à pergunta sobre o Pará. Veja como `minusculo` reconhece a resposta e soma um ponto. |
+| [**Caixa do mercadinho**](exemplos/mercadinho.br) | Lance `4.25`, `12.90` e `0.85`. Digite `0` para fechar a compra. O caixa mostra R$ 18,00 e identifica o segundo item como o mais caro. |
 
-[Guia da IDE e atalhos](docs/ide.md) · [Como funciona a compilação](docs/ide.md#compilacao)
+Quer um exercício menor? Descubra se `-7` é [par ou ímpar](exemplos/par_ou_impar.br) ou leve a [tabuada do sete](exemplos/tabuada.br) de 10 até 12 multiplicações.
 
-## Escolha um projeto para abrir agora
+**Em sala de aula**, a oficina tem três etapas com entradas e resultados esperados. Comece contando vagas, faça a turma aceitar ou recusar uma reserva e termine somando lugares em uma lista de turmas. [Abrir a oficina guiada](exemplos/README.md#oficina-guiada)
 
-Extraia o ZIP dos exemplos, escolha um arquivo `.br` em **Arquivo → Abrir** e pressione **F5**. Cada projeto abaixo tem uma pequena experiência para fazer no Terminal.
+<a name="faça-um-site-rodar-no-navegador"></a>
 
-| Programa | Experimente | Você pratica |
-| --- | --- | --- |
-| [Calculadora](exemplos/calculadora.br) | Digite `3`, `/` e `2`, uma resposta por vez. O resultado é `1.5`. | Números decimais, operações e divisão por zero |
-| [Tabuada](exemplos/tabuada.br) | Digite `7` e encontre `7 x 10 = 70` na última linha. | Repetição com `para` |
-| [Adivinhe o número](exemplos/adivinhacao.br) | Comece por `50`. Use as pistas *maior* e *menor* até acertar o número sorteado. | `sorteia`, condições e `enquanto` |
-| [Racha-conta](exemplos/racha_conta.br) | Divida R$ 100 com 10% de gorjeta por três pessoas. Duas pagam R$ 36,67 e uma paga R$ 36,66. | Arredondamento, resto e funções |
-| [Quiz das capitais](exemplos/quiz_capitais.br) | Para o Pará, responda `BELÉM`. O quiz aceita a resposta e soma um ponto. | Listas, comparação de textos e placar |
-| [Mercadinho](exemplos/mercadinho.br) | Digite `4.25`, `12.90`, `0.85` e `0`. Confira o total de R$ 18,00 e o item mais caro. | Acumuladores e comparação de preços |
+## Sites para abrir no navegador
 
-**Para uma aula de lógica**, os três programas da oficina formam uma sequência. A turma começa contando lugares livres, passa a aceitar ou recusar um pedido de reserva e termina somando vagas em várias turmas. Cada etapa traz o código, a saída esperada e uma alteração para testar. [Fazer a oficina guiada](exemplos/README.md#oficina-guiada)
+<table>
+<tr>
+<td width="33%" valign="top"><a href="exemplos/sites/feira-do-bairro/README.md"><img src="imagens/previa-feira.webp" alt="Prévia da feira com os filtros de comida e artesanato"><br><strong>Feira do Bairro →</strong></a><br>Adicione uma barraca ao HTML e encontre-a pelo filtro.</td>
+<td width="33%" valign="top"><a href="exemplos/sites/quiz-do-brasil/README.md"><img src="imagens/previa-quiz.webp" alt="Prévia do quiz com uma pergunta sobre a capital do Pará"><br><strong>Quiz do Brasil →</strong></a><br>Escolha uma capital e crie a próxima pergunta no JavaScript.</td>
+<td width="33%" valign="top"><a href="exemplos/sites/cine-da-vila/README.md"><img src="imagens/previa-cine.webp" alt="Prévia do cineclube com o cartaz de A última bicicleta"><br><strong>Cine da Vila →</strong></a><br>Siga o cartaz até os horários e mude uma sessão.</td>
+</tr>
+</table>
 
-<details>
-<summary><strong>Por que 3 / 2 às vezes resulta em 1 e às vezes em 1.5?</strong></summary>
+Em **Arquivo → Abrir pasta**, escolha a pasta do site que contém `servidor.br`. No rodapé, clique em **Servidor web → Iniciar servidor web → Abrir no navegador**. Salve uma mudança no HTML, CSS ou JavaScript pela IDE e a página aberta recarrega.
 
-Em `inteiro metade = 3 / 2`, a divisão inteira descarta a parte fracionária. Em `decimal metade = 3 / 2`, o contexto decimal preserva a fração. Para mostrar a fração diretamente, escreva `escreval(3.0 / 2)`. Use ponto ao digitar valores decimais. [Números e expressões na referência](LINGUAGEM.md)
-
-</details>
-
-## Faça um site rodar no navegador
-
-A Alumia também serve páginas HTML no seu computador. O HTML organiza o conteúdo, o CSS dá a aparência e o JavaScript responde aos cliques. O arquivo `servidor.br` define quais páginas o navegador pode abrir.
-
-[![Prévia dos projetos Feira do Bairro, Quiz do Brasil e Cine da Vila, nessa ordem](imagens/sites-exemplos.webp)](exemplos/README.md#sites-para-abrir-na-ide)
-
-- **Feira do Bairro** — filtre as barracas por comida ou artesanato. Depois adicione uma barraca ao HTML e veja o filtro encontrá-la. [Abrir o projeto da feira](exemplos/sites/feira-do-bairro/README.md)
-- **Quiz do Brasil** — escolha uma capital pelos botões, confira a correção e jogue outra rodada. O guia mostra como escrever sua própria pergunta em JavaScript. [Abrir o quiz web](exemplos/sites/quiz-do-brasil/README.md)
-- **Cine da Vila** — clique no cartaz para abrir a programação de sábado. As duas páginas usam o mesmo CSS e têm endereços próprios. [Abrir o cineclube](exemplos/sites/cine-da-vila/README.md)
-
-Este é o servidor inteiro do Cine da Vila. O endereço `/programacao/` entrega o arquivo `publico/programacao/index.html`.
+O **Cine da Vila** usa este servidor inteiro. O link `/programacao/` entrega a página `publico/programacao/index.html`.
 
 ```br
 rota.get("/")
@@ -86,25 +72,56 @@ rota.get("/programacao")
 servidor_http(8083, "publico")
 ```
 
-Para testar, use **Arquivo → Abrir pasta** e escolha a pasta que contém `servidor.br`. No rodapé, abra **Servidor web**, clique em **Iniciar servidor web** e depois em **Abrir no navegador**. Salvar HTML, CSS ou JavaScript pela IDE recarrega a página. Para aplicar mudanças nas rotas ou na porta, pare e inicie o servidor novamente.
+Para começar um site seu, **Arquivo → Novo projeto web** cria a página inicial e os arquivos de estilo e script. O tutorial ensina a criar a segunda rota e conferir o resultado no navegador. [Criar meu primeiro site](exemplos/site/README.md)
 
-Quer começar em uma pasta vazia? **Arquivo → Novo projeto web** cria o servidor, a página inicial e os arquivos de estilo e script. Se for distribuir o site compilado, leve a pasta `publico/` ao lado do executável. [Tutorial do primeiro site](exemplos/site/README.md)
+## Conheça a IDE
 
-## Como a Alumia funciona
+![Editor da Alumia em tema escuro, com o botão Executar e as abas Terminal, Problemas, Compilação e Servidor web](imagens/ide-macos.jpg)
+
+- **Escreva e rode.** Digite `esc` e pressione **Tab** para completar o comando. **F5** executa o que está no editor, inclusive antes de salvar.
+- **Entenda o erro.** Clique na mensagem em português na aba **Problemas**. O editor seleciona o trecho correspondente. As respostas a `leia()` e a saída de `escreval()` ficam no **Terminal**.
+- **Leve o programa com você.** Em **Compilar**, escolha nome e pasta. A IDE salva o `.br` e o executável para o mesmo sistema e arquitetura. Para levar um site compilado, copie também a pasta `publico/` ao lado do binário.
+- **Estude offline.** O menu **Documentação** reúne 52 exemplos em 16 assuntos. Em **Exibir**, dá para ajustar as fontes do editor e do Terminal separadamente.
+
+[Guia da IDE e atalhos](docs/ide.md) · [Compilar um executável](docs/ide.md#compilacao) · [Todos os exemplos](exemplos/README.md)
+
+## Baixe para seu computador
+
+A versão **0.1.0** já inclui o executor e as ferramentas de compilação. Basta instalar o pacote do seu sistema para escrever e rodar programas BR.
+
+| Sistema | Download |
+| --- | --- |
+| **Windows x64** | [Instalador .exe](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-Setup.exe) |
+| **macOS 14 ou posterior** | [Apple Silicon · chip M](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-macOS-arm64.zip) · [Processador Intel](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-macOS-x64.zip) |
+| **Linux x64** | [Pacote .tar.gz](https://github.com/alumia-brasil/alumia-br/releases/download/v0.1.0/Alumia-Linux-x64.tar.gz) |
+
+**Primeira abertura.** O instalador Windows ainda está sem assinatura de editor. No Mac, a versão tem assinatura ad hoc e aguarda notarização. O Gatekeeper bloqueou a abertura no teste com macOS 27.3. A execução em Mac Intel ainda precisa de validação. [Instalação por sistema, Homebrew e SHA-256](docs/instalacao.md) · [Página da versão](https://github.com/alumia-brasil/alumia-br/releases/latest)
+
+<a name="como-a-alumia-funciona"></a>
+
+## Por dentro da Alumia
 
 ![C11](https://img.shields.io/badge/C11-304D73?style=flat-square&logo=c&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Electron](https://img.shields.io/badge/Electron-253D59?style=flat-square&logo=electron&logoColor=white)
 ![Zig](https://img.shields.io/badge/Zig-E4B84D?style=flat-square&logo=zig&logoColor=222222)
 
-O editor de desktop usa TypeScript e Electron. Ao pressionar **F5**, o executor nativo da Alumia lê e executa o programa BR. Ao escolher **Compilar**, a IDE gera C, usa o Zig que acompanha o pacote e liga o programa à biblioteca da linguagem para produzir um executável.
+**Executar** usa o executor nativo da linguagem. **Compilar** gera C e usa o Zig incluído para produzir o binário. A interface é feita em TypeScript e Electron. A linguagem tem listas tipadas, funções com parâmetros e retorno, comparações, condições e laços. [Consultar a sintaxe e os limites da versão](LINGUAGEM.md)
 
-A linguagem oferece tipos `inteiro`, `decimal`, `texto` e `booleano`, listas tipadas, funções com parâmetros e retorno, comparações, condições e laços. A referência inclui as regras de tipos e os limites da versão. [Consultar a linguagem](LINGUAGEM.md) · [Explorar os exemplos por assunto](exemplos/README.md)
+<details>
+<summary><strong>Quando a divisão preserva as casas decimais?</strong></summary>
 
-## Participe
+Em `inteiro metade = 3 / 2`, o valor é `1`. Em `decimal metade = 3 / 2`, é `1.5`. Para imprimir a fração diretamente, use `escreval(3.0 / 2)`. O separador decimal da linguagem é o ponto.
 
-Este repositório reúne os pacotes de instalação, os guias e o código dos exemplos. Correções nos guias e exercícios podem ser enviadas por pull request.
+</details>
 
-Usou a Alumia em aula ou encontrou uma mensagem que ficou difícil de entender? Abra uma issue usando o modelo de dúvida, erro ou sugestão e conte qual programa estava tentando escrever. Um trecho curto de BR e o resultado esperado ajudam a reproduzir o caso. [Enviar uma dúvida ou sugestão](https://github.com/alumia-brasil/alumia-br/issues/new/choose) · [Suporte](SUPPORT.md)
+<a name="participe"></a>
 
-A Alumia é distribuída sob a licença [PolyForm Noncommercial 1.0.0](LICENSE). As licenças dos componentes que acompanham o aplicativo estão nos [avisos de terceiros](THIRD_PARTY_NOTICES.md).
+<details>
+<summary><strong>Como contribuir ou sugerir um exercício?</strong></summary>
+
+Este repositório reúne os downloads, os guias e o código dos exemplos. Correções nos guias e exercícios podem ser enviadas por pull request. Para sugerir uma atividade ou relatar um erro, conte o que tentou e qual resultado esperava. [Abrir uma issue](https://github.com/alumia-brasil/alumia-br/issues/new/choose) · [Suporte](SUPPORT.md)
+
+</details>
+
+A Alumia é distribuída sob a licença [PolyForm Noncommercial 1.0.0](LICENSE). As licenças dos componentes distribuídos com a IDE estão nos [avisos de terceiros](THIRD_PARTY_NOTICES.md).
