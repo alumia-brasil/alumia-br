@@ -1,0 +1,19 @@
+decimal primeiro = para_decimal(leia("Primeiro número: "))
+texto operacao = leia("Operação (+, -, * ou /): ")
+decimal segundo = para_decimal(leia("Segundo número: "))
+
+se (operacao == "+") {
+    escreval("Resultado: ", primeiro + segundo)
+} senao se (operacao == "-") {
+    escreval("Resultado: ", primeiro - segundo)
+} senao se (operacao == "*") {
+    escreval("Resultado: ", primeiro * segundo)
+} senao se (operacao == "/") {
+    se (segundo == 0) {
+        escreval("Não é possível dividir por zero.")
+    } senao {
+        escreval("Resultado: ", primeiro / segundo)
+    }
+} senao {
+    escreval("Operação desconhecida. Use +, -, * ou /.")
+}

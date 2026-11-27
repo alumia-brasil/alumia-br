@@ -1,10 +1,22 @@
-# Aprenda Alumia com uma oficina de programação
-
-Imagine que você organiza oficinas no seu bairro. Primeiro, descubra quantos lugares estão livres. Depois, pergunte quantas vagas uma pessoa quer reservar. Por fim, some os lugares disponíveis em várias turmas. Cada etapa é um programa que você pode abrir e executar por conta própria.
+# Exemplos de programação em Alumia
 
 **Para acompanhar**, [baixe os exemplos em ZIP](https://github.com/alumia-brasil/alumia-br/archive/refs/heads/main.zip), extraia a pasta e use **Arquivo → Abrir** na Alumia para escolher um arquivo `.br`. Se preferir digitar, use **Arquivo → Novo** e substitua o conteúdo do editor. **Executar** ou **F5** roda o exemplo. A saída e os pedidos de entrada ficam na aba **Terminal**.
 
-## 1. Quantos lugares sobraram?
+## Programas básicos
+
+| Abra na IDE | Digite no Terminal | Confira o resultado |
+| --- | --- | --- |
+| [Calculadora de quatro operações](calculadora.br) | Digite `3`, depois `/` e depois `2`. Aperte **Enter** após cada resposta. | `Resultado: 1.5`. Execute outra vez e tente dividir por zero para ver como o programa trata esse caso. |
+| [Par ou ímpar](par_ou_impar.br) | Digite `-7`. Depois rode de novo com `0`. | Primeiro aparece `-7 é ímpar.` e depois `0 é par.`. O operador `%` calcula o resto da divisão. |
+| [Tabuada](tabuada.br) | Digite `7`. | Aparecem dez linhas, de `7 x 1 = 7` até `7 x 10 = 70`. Troque o limite do laço por `12` para chegar até `7 x 12 = 84`. |
+
+Na calculadora, use `*` para multiplicar e `/` para dividir. Para digitar uma fração decimal, use ponto, como em `2.5`. Tente multiplicar esse valor por `4` e confira se o resultado é `10`.
+
+## Oficina guiada
+
+Imagine que você organiza oficinas no seu bairro. Primeiro, descubra quantos lugares estão livres. Depois, pergunte quantas vagas uma pessoa quer reservar. Por fim, some os lugares disponíveis em várias turmas. Cada etapa é um programa independente.
+
+### 1. Quantos lugares sobraram?
 
 Abra [oficina/vagas.br](oficina/vagas.br). Cada variável guarda um valor inteiro. A subtração dentro de `escreval` calcula o resultado e o mostra na mesma linha do texto.
 
@@ -17,7 +29,7 @@ escreval("Vagas livres: ", capacidade - inscritos)
 
 **Confira no Terminal.** Com 17 inscritos, aparece `Vagas livres: 3`. Troque `17` por `20` e rode outra vez. Agora aparece `Vagas livres: 0`.
 
-## 2. O pedido cabe na turma?
+### 2. O pedido cabe na turma?
 
 Abra [oficina/inscricao.br](oficina/inscricao.br). Agora o programa espera uma resposta. Digite um número inteiro no **Terminal** e aperte **Enter**. Rode de novo para tentar outro pedido.
 
@@ -42,7 +54,7 @@ se (pedido >= 1 e pedido <= vagas) {
 
 **Experimente.** Mude a quantidade disponível para `5` e peça `4` vagas. O mesmo pedido que antes era recusado agora deixa uma vaga livre.
 
-## 3. E quando há mais de uma turma?
+### 3. E quando há mais de uma turma?
 
 Abra [oficina/turmas.br](oficina/turmas.br). As três turmas têm 20 lugares cada uma. Os números da lista são as inscrições de cada turma, na ordem.
 

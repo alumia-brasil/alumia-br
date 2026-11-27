@@ -1,0 +1,8 @@
+inteiro numero = para_inteiro(leia("Digite um número inteiro: "))
+
+// Se a divisão por 2 deixa resto zero, o número é par.
+se (numero % 2 == 0) {
+    escreval(numero, " é par.")
+} senao {
+    escreval(numero, " é ímpar.")
+}

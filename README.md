@@ -28,7 +28,7 @@ inteiro inscritos = 17
 escreval("Vagas livres: ", capacidade - inscritos)
 ```
 
-O **Terminal** mostra `Vagas livres: 3`. Troque `17` por `20` e execute de novo. Na próxima etapa, você vai perguntar quantas vagas a pessoa quer reservar e decidir se o pedido cabe na turma. [Continuar a oficina de programação](exemplos/README.md)
+O **Terminal** mostra `Vagas livres: 3`. Troque `17` por `20` e execute de novo. Na próxima etapa, você vai perguntar quantas vagas a pessoa quer reservar e decidir se o pedido cabe na turma. [Continuar a oficina de programação](exemplos/README.md#oficina-guiada)
 
 ![IDE em tema escuro, com um programa BR no editor, o botão Executar e as abas Terminal, Problemas, Compilação e Servidor web](imagens/ide-macos.jpg)
 
@@ -36,6 +36,7 @@ O **Terminal** mostra `Vagas livres: 3`. Troque `17` por `20` e execute de novo.
 
 | Quero… | Por onde começar |
 | --- | --- |
+| Rodar uma calculadora ou gerar uma tabuada | [Programas básicos com entradas e resultados](exemplos/README.md#programas-básicos) |
 | Praticar condições, repetições e funções | [Oficina guiada e catálogo de exemplos](exemplos/README.md) |
 | Ver uma página minha no navegador | [Site com duas páginas, CSS, JavaScript e uma imagem](exemplos/site/README.md) |
 | Transformar meu arquivo `.br` em executável | [Compilação pela IDE](docs/ide.md#compilacao) |

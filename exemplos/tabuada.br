@@ -1,0 +1,5 @@
+inteiro numero = para_inteiro(leia("Quer ver a tabuada de qual número? "))
+
+para (inteiro fator = 1; fator <= 10; fator = fator + 1) {
+    escreval(numero, " x ", fator, " = ", numero * fator)
+}
