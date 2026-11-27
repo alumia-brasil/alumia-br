@@ -2,7 +2,7 @@
 
 Referência da sintaxe atual para estudo e consulta. Os programas usam a extensão `.br` e a codificação UTF-8, com ou sem BOM. Arquivos com quebras de linha LF, CRLF e CR têm o mesmo comportamento. Escapes hexadecimais em textos devem formar UTF-8 válido, como `"\xC3\xA9"` para `"é"`.
 
-[Voltar à apresentação](README.md) · [Exemplos completos](exemplos/) · [Usar a IDE](docs/ide.md)
+[Voltar à apresentação](README.md) · [Oficina e exemplos por assunto](exemplos/README.md) · [Usar a IDE](docs/ide.md)
 
 ## O que já funciona
 

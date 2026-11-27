@@ -1,0 +1,8 @@
+inteiro vagas = 3
+inteiro pedido = para_inteiro(leia("Quantas vagas você quer reservar? "))
+
+se (pedido >= 1 e pedido <= vagas) {
+    escreval("Reserva confirmada. Vagas restantes: ", vagas - pedido)
+} senao {
+    escreval("Escolha de 1 a ", vagas, " vagas.")
+}

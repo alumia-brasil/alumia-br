@@ -1,6 +1,6 @@
 # Guia da IDE Alumia
 
-[Apresentação do projeto](../README.md) · [Guia da linguagem](../LINGUAGEM.md) · [Instalação](instalacao.md)
+[Apresentação do projeto](../README.md) · [Guia da linguagem](../LINGUAGEM.md) · [Instalação](instalacao.md) · [Praticar com exemplos](../exemplos/README.md)
 
 A IDE reúne editor, executor, compilador e documentação da linguagem em uma janela. A implementação e os pacotes locais ainda usam o nome **BR IDE** durante a transição para Alumia.
 

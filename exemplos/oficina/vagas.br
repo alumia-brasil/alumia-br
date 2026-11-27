@@ -1,0 +1,4 @@
+inteiro capacidade = 20
+inteiro inscritos = 17
+
+escreval("Vagas livres: ", capacidade - inscritos)

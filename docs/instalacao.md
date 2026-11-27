@@ -36,4 +36,4 @@ Guarde a pasta extraída inteira. O executável usa as bibliotecas e os recursos
 
 A página da versão inclui `SHA256SUMS.txt`. Compare a linha do seu pacote com o SHA-256 calculado no seu computador. No Windows, use `Get-FileHash .\Alumia-Setup.exe -Algorithm SHA256` no PowerShell. No Mac, use `shasum -a 256` seguido do nome do ZIP. No Linux, use `sha256sum Alumia-Linux-x64.tar.gz`.
 
-Abra o [guia da IDE](ide.md) para executar o primeiro exemplo.
+Com a IDE aberta, você já pode calcular as vagas de uma turma e conferir sua primeira saída no Terminal. [Fazer o primeiro exercício](../exemplos/README.md) · [Conhecer os controles da IDE](ide.md)

@@ -1,0 +1,12 @@
+funcao inteiro vagas_livres(inteiro capacidade, inteiro inscritos) {
+    retorna(capacidade - inscritos)
+}
+
+lista<inteiro> inscritos = [17, 20, 12]
+inteiro total = 0
+
+para (inteiro i = 0; i < tamanho(inscritos); i = i + 1) {
+    total = total + vagas_livres(20, inscritos[i])
+}
+
+escreval("Total de vagas livres: ", total)
