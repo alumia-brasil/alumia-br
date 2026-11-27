@@ -1,0 +1,20 @@
+inteiro segredo = sorteia(1, 100)
+inteiro palpite = 0
+inteiro tentativas = 0
+
+escreval("Sorteei um número de 1 a 100. Consegue adivinhar?")
+enquanto (palpite != segredo) {
+    palpite = para_inteiro(leia("Seu palpite: "))
+    se (palpite < 1 ou palpite > 100) {
+        escreval("Escolha um número de 1 a 100. Essa tentativa não conta.")
+    } senao {
+        tentativas = tentativas + 1
+        se (palpite < segredo) {
+            escreval("O número sorteado é maior.")
+        } senao se (palpite > segredo) {
+            escreval("O número sorteado é menor.")
+        } senao {
+            escreval("Acertou! Tentativas: ", tentativas)
+        }
+    }
+}

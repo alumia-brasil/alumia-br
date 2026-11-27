@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capitais do Brasil · Quiz de geografia</title>
+    <link rel="stylesheet" href="estaticos/css/estilo.css">
+    <script src="estaticos/scripts/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Capitais do Brasil</h1>
+            <p>Escolha a capital de cada estado. Cada acerto vale um ponto.</p>
+        </header>
+        <noscript><p>Ative o JavaScript no navegador para jogar.</p></noscript>
+
+        <section id="rodada" aria-labelledby="pergunta" hidden>
+            <div class="painel">
+                <span id="progresso"></span>
+                <span id="placar"></span>
+            </div>
+            <h2 id="pergunta" tabindex="-1"></h2>
+            <div id="alternativas" role="group" aria-labelledby="pergunta"></div>
+            <p id="resposta" tabindex="-1" hidden></p>
+            <button id="avancar" class="acao" type="button" hidden>Próxima pergunta</button>
+        </section>
+
+        <section id="resultado" aria-labelledby="titulo-final" hidden>
+            <h2 id="titulo-final" tabindex="-1">Resultado final</h2>
+            <p id="resumo"></p>
+            <button id="reiniciar" class="acao" type="button">Jogar de novo</button>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #fff9e8;
+    color: #24392b;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+.miolo {
+    width: min(68rem, 90%);
+    margin-inline: auto;
+}
+
+header {
+    background: #244d38;
+    color: #fff9e8;
+}
+
+/* As listras lembram o toldo de uma barraca. */
+header::before {
+    content: "";
+    display: block;
+    height: 1rem;
+    background: repeating-linear-gradient(90deg, #ffcb70 0 2rem, #ae4c32 2rem 4rem);
+}
+
+.abertura {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+    line-height: 1.08;
+}
+
+h1 { font-size: clamp(3.2rem, 8vw, 6.5rem); }
+h1 em { color: #ffcb70; }
+h2 { font-size: clamp(2rem, 5vw, 3rem); }
+h3 { font-size: 1.55rem; }
+
+.servico {
+    border-left: 3px solid #ffcb70;
+    padding-left: 1rem;
+}
+
+.servico span, .servico strong { display: block; }
+main { padding-block: 2.5rem; }
+
+.controles, .filtros {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.controles {
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+
+[hidden] { display: none; }
+
+button {
+    min-height: 44px;
+    padding: 0.4rem 1rem;
+    border: 1px solid #45634c;
+    border-radius: 2rem;
+    background: transparent;
+    color: #244d38;
+    font: inherit;
+    cursor: pointer;
+}
+
+button[aria-pressed="true"] {
+    background: #244d38;
+    color: white;
+}
+
+button:focus-visible {
+    outline: 3px solid #9a360c;
+    outline-offset: 2px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.catalogo li {
+    padding: 1.2rem;
+    border: 1px solid #c9bd9f;
+    border-top: 5px solid #a45320;
+    background: #fffcf4;
+}
+
+.catalogo li[data-categoria="artesanato"] { border-top-color: #66629a; }
+
+.categoria {
+    margin: 0 0 0.45rem;
+    color: #5c523a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h3 + p { margin-bottom: 0; }

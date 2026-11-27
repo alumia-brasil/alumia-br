@@ -1,0 +1,3 @@
+// A página inicial fica em publico/index.html.
+rota.get("/")
+servidor_http(8081, "publico")

@@ -12,6 +12,28 @@
 
 Na calculadora, use `*` para multiplicar e `/` para dividir. Para digitar uma fração decimal, use ponto, como em `2.5`. Tente multiplicar esse valor por `4` e confira se o resultado é `10`.
 
+## Jogos e programas do dia a dia
+
+| Abra e execute com F5 | Digite no Terminal | O que observar |
+| --- | --- | --- |
+| [Adivinhe o número](adivinhacao.br) | Comece por `50`. Se a pista disser **maior**, tente `75`. Se disser **menor**, tente `25`. | `sorteia(1, 100)` escolhe o segredo no início da partida. O jogo conta os palpites válidos e termina quando você acerta. |
+| [Racha-conta](racha_conta.br) | Digite `100` para a conta, `10` para a gorjeta em porcentagem e `3` para o número de pessoas. | O total é **R$ 110,00**. Duas pessoas pagam **R$ 36,67** e uma paga **R$ 36,66**. O programa distribui até o último centavo. |
+| [Quiz das capitais](quiz_capitais.br) | Responda `Salvador`, `Natal`, `BELÉM`, `curitiba` e `Recife`, uma cidade por vez. | A pontuação é **4 de 5**. Na segunda pergunta, o programa mostra a resposta correta, Fortaleza. Ele aceita maiúsculas e minúsculas. |
+| [Caixa do mercadinho](mercadinho.br) | Digite três preços, `4.25`, `12.90` e `0.85`. Para fechar a compra, digite `0`. | O total é **R$ 18,00**. O segundo item, de **R$ 12,90**, é o mais caro. Experimente iniciar outra compra e digitar `0` logo de cara. |
+
+## Sites para abrir na IDE
+
+![Feira do Bairro com filtros de barracas, Quiz do Brasil com alternativas e Cine da Vila com o cartaz do filme em destaque](../imagens/sites-exemplos.webp)
+
+Extraia o [ZIP dos exemplos](https://github.com/alumia-brasil/alumia-br/archive/refs/heads/main.zip). Em **Arquivo → Abrir pasta**, escolha a pasta do site que contém o `servidor.br`. No rodapé, abra **Servidor web → Iniciar servidor web → Abrir no navegador**. Cada guia traz uma mudança pequena para você fazer e conferir ao salvar.
+
+| Projeto | Experimente no navegador |
+| --- | --- |
+| [Meu primeiro site](site/README.md) | Digite seu nome no formulário e siga o tutorial para criar a página `/agenda/`. |
+| [Feira do Bairro](sites/feira-do-bairro/README.md) | Alterne entre **Comida** e **Artesanato**. Depois, cadastre uma barraca no HTML e veja o filtro encontrá-la. |
+| [Quiz do Brasil](sites/quiz-do-brasil/README.md) | Escolha as capitais pelos botões, veja a correção e jogue outra rodada. O guia mostra como escrever sua própria pergunta em JavaScript. |
+| [Cine da Vila](sites/cine-da-vila/README.md) | Siga o link do cartaz para `/programacao/` e altere o horário de uma sessão. As duas páginas têm rotas próprias e usam o mesmo CSS. |
+
 ## Oficina guiada
 
 Imagine que você organiza oficinas no seu bairro. Primeiro, descubra quantos lugares estão livres. Depois, pergunte quantas vagas uma pessoa quer reservar. Por fim, some os lugares disponíveis em várias turmas. Cada etapa é um programa independente.
@@ -91,7 +113,5 @@ A primeira posição da lista é `0`, então `inscritos[0]` vale `17`. A cada vo
 | Sortear e comparar valores | [utilitarias.br](utilitarias.br) | Rode algumas vezes. As notas mínima e máxima continuam iguais, e o dado pode cair de 1 a 6. |
 | Fazer uma pausa | [espera.br](espera.br) | A mensagem só aparece após uma pausa sorteada de 1 a 20 segundos. Para experimentar uma pausa curta, use `espera(0.25)`. |
 | Combinar entrada, lista e repetição | [basico.br](basico.br) | Digite `Ana`, `18` e `8.5`, uma resposta por vez. Procure `Olá, ANA!` e `Média: 9` na saída. |
-
-Quer ver o resultado no navegador? O próximo projeto tem duas páginas prontas e um desafio para criar a terceira. [Fazer o tutorial de site](site/README.md)
 
 [Voltar ao início](../README.md) · [Consultar a linguagem](../LINGUAGEM.md) · [Usar a IDE](../docs/ide.md)

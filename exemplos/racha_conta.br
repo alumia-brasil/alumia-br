@@ -1,0 +1,48 @@
+funcao texto em_reais(inteiro centavos) {
+    inteiro reais = centavos / 100
+    inteiro resto = centavos % 100
+    texto casas = para_texto(resto)
+    se (resto < 10) {
+        casas = "0" + casas
+    }
+    retorna("R$ " + para_texto(reais) + "," + casas)
+}
+
+funcao principal() {
+    decimal conta = para_decimal(leia("Valor da conta em reais (ex.: 42.50): "))
+    se (conta < 0) {
+        escreval("O valor da conta precisa ser zero ou positivo.")
+        retorna()
+    }
+    inteiro conta_centavos = para_inteiro(arredondar(conta * 100))
+    se (conta != conta_centavos / 100.0) {
+        escreval("Informe a conta com até duas casas decimais.")
+        retorna()
+    }
+
+    decimal percentual = para_decimal(leia("Gorjeta em porcentagem (0 para nenhuma): "))
+    se (percentual < 0) {
+        escreval("A porcentagem da gorjeta precisa ser zero ou positiva.")
+        retorna()
+    }
+    inteiro pessoas = para_inteiro(leia("Quantas pessoas vão dividir a conta? "))
+    se (pessoas <= 0) {
+        escreval("Informe pelo menos uma pessoa para dividir a conta.")
+        retorna()
+    }
+
+    // Arredonde a gorjeta uma vez e divida o total em centavos inteiros.
+    inteiro gorjeta = para_inteiro(arredondar(conta_centavos * percentual / 100))
+    inteiro total = conta_centavos + gorjeta
+    inteiro por_pessoa = total / pessoas
+    inteiro resto = total % pessoas
+    escreval("Gorjeta: ", em_reais(gorjeta))
+    escreval("Total com gorjeta: ", em_reais(total))
+    se (resto == 0) {
+        escreval("Cada pessoa paga ", em_reais(por_pessoa), ".")
+    } senao {
+        // Cada centavo que sobra vai para uma pessoa diferente.
+        escreval("Pessoas que pagam ", em_reais(por_pessoa + 1), ": ", resto)
+        escreval("Pessoas que pagam ", em_reais(por_pessoa), ": ", pessoas - resto)
+    }
+}

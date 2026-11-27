@@ -1,0 +1,2 @@
+rota.get("/")
+servidor_http(8082, "publico")

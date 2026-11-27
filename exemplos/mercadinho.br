@@ -1,0 +1,43 @@
+funcao texto em_reais(inteiro centavos) {
+    inteiro reais = centavos / 100
+    inteiro resto = centavos % 100
+    texto casas = para_texto(resto)
+    se (resto < 10) {
+        casas = "0" + casas
+    }
+    retorna("R$ " + para_texto(reais) + "," + casas)
+}
+
+inteiro quantidade = 0
+inteiro total = 0
+inteiro maior_preco = 0
+inteiro item_mais_caro = 0
+
+texto pergunta = "Preço em reais (ex.: 3.50) ou 0 para fechar: "
+decimal preco = para_decimal(leia(pergunta))
+enquanto (preco != 0) {
+    se (preco < 0) {
+        escreval("Preço negativo. Esse item não entrou na compra.")
+    } senao {
+        inteiro centavos = para_inteiro(arredondar(preco * 100))
+        se (preco != centavos / 100.0) {
+            escreval("Use até duas casas decimais. Digite o preço de novo.")
+        } senao {
+            quantidade = quantidade + 1
+            total = total + centavos
+            // Em caso de empate, o primeiro item mantém a posição.
+            se (centavos > maior_preco) {
+                maior_preco = centavos
+                item_mais_caro = quantidade
+            }
+        }
+    }
+    preco = para_decimal(leia(pergunta))
+}
+
+escreval("Total da compra: ", em_reais(total))
+se (quantidade == 0) {
+    escreval("Nenhum item na compra.")
+} senao {
+    escreval("Item mais caro: nº ", item_mais_caro, " (", em_reais(maior_preco), ").")
+}

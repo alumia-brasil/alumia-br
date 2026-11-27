@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feira do Bairro · Praça da Mangueira</title>
+    <link rel="stylesheet" href="estaticos/css/estilo.css">
+    <script src="estaticos/scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="miolo abertura">
+            <h1>Feira do <em>Bairro</em></h1>
+            <div class="servico">
+                <strong>Praça da Mangueira</strong>
+                <span>Sábados, das 8h às 13h</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="miolo">
+        <h2>Guia de barracas</h2>
+        <div class="controles" hidden>
+            <div class="filtros" role="group" aria-label="Filtrar barracas por categoria">
+                <button type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+                <button type="button" data-filtro="comida" aria-pressed="false">Comida</button>
+                <button type="button" data-filtro="artesanato" aria-pressed="false">Artesanato</button>
+            </div>
+            <span id="resultado" role="status"></span>
+        </div>
+
+        <ul class="catalogo">
+            <li data-categoria="comida">
+                <p class="categoria">Comida</p>
+                <h3>Milho da Cida</h3>
+                <p>Milho cozido na hora e pamonha embrulhada na própria palha.</p>
+            </li>
+            <li data-categoria="artesanato">
+                <p class="categoria">Artesanato</p>
+                <h3>Linha da Lúcia</h3>
+                <p>Bolsas de crochê e caminhos de mesa feitos com linha de algodão.</p>
+            </li>
+            <li data-categoria="comida">
+                <p class="categoria">Comida</p>
+                <h3>Pomar do Zeca</h3>
+                <p>Laranja para descascar na praça ou levar em suco espremido na hora.</p>
+            </li>
+            <li data-categoria="artesanato">
+                <p class="categoria">Artesanato</p>
+                <h3>Barro da Vila</h3>
+                <p>Canecas e pequenos vasos de barro modelados à mão.</p>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

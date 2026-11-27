@@ -1,0 +1,15 @@
+lista<texto> estados = ["Bahia", "Ceará", "Pará", "Paraná", "Pernambuco"]
+lista<texto> capitais = ["Salvador", "Fortaleza", "Belém", "Curitiba", "Recife"]
+inteiro pontos = 0
+
+escreval("Quiz das capitais. Use os acentos quando houver.")
+para (inteiro i = 0; i < tamanho(estados); i = i + 1) {
+    texto resposta = leia("Estado: " + estados[i] + ". Qual é a capital? ")
+    se (minusculo(resposta) == minusculo(capitais[i])) {
+        pontos = pontos + 1
+        escreval("Acertou!")
+    } senao {
+        escreval("A capital é ", capitais[i], ".")
+    }
+}
+escreval("Pontuação: ", pontos, " de ", tamanho(estados))

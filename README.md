@@ -37,8 +37,9 @@ O **Terminal** mostra `Vagas livres: 3`. Troque `17` por `20` e execute de novo.
 | Quero… | Por onde começar |
 | --- | --- |
 | Rodar uma calculadora ou gerar uma tabuada | [Programas básicos com entradas e resultados](exemplos/README.md#programas-básicos) |
+| Jogar, dividir uma conta ou simular um caixa | [Quatro programas interativos em BR](exemplos/README.md#jogos-e-programas-do-dia-a-dia) |
 | Praticar condições, repetições e funções | [Oficina guiada e catálogo de exemplos](exemplos/README.md) |
-| Ver uma página minha no navegador | [Site com duas páginas, CSS, JavaScript e uma imagem](exemplos/site/README.md) |
+| Criar um site na IDE | [Primeiro site, feira com filtro, quiz e cineclube](exemplos/README.md#sites-para-abrir-na-ide) |
 | Transformar meu arquivo `.br` em executável | [Compilação pela IDE](docs/ide.md#compilacao) |
 | Consultar a sintaxe de um comando | [Referência da linguagem](LINGUAGEM.md) |
 | Relatar um erro ou sugerir um exercício | [Suporte e participação](SUPPORT.md) |

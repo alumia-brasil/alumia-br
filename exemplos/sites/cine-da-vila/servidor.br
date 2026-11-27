@@ -1,0 +1,3 @@
+rota.get("/")
+rota.get("/programacao")
+servidor_http(8083, "publico")

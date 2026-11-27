@@ -1,0 +1,82 @@
+:root {
+    font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+    color: #233931;
+    background: #f4f0e4;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: clamp(1rem, 5vw, 4rem) 1rem;
+    background-image: radial-gradient(#d4ccbb 1px, transparent 1px);
+    background-size: 1rem 1rem;
+    min-height: 100vh;
+}
+main {
+    max-width: 42rem;
+    margin: auto;
+    background: #fffcf4;
+    border: 1px solid #bdb7a6;
+    border-radius: 1rem;
+    box-shadow: 0 5px 0 #ddd5c1;
+}
+header, section, noscript p { padding: clamp(1.25rem, 5vw, 2.75rem); }
+header {
+    color: #fff9e7;
+    background: #184b40;
+    background-image: repeating-radial-gradient(ellipse at 110% -150%, transparent 0 30px, #23584d 31px 32px);
+    border-radius: .95rem .95rem 0 0;
+    border-bottom: .4rem solid #e5af4b;
+}
+h1, h2 {
+    margin: 0;
+    font-family: "DM Serif Text", Georgia, serif;
+    line-height: 1.12;
+}
+h1 { font-size: clamp(2.35rem, 7vw, 4rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.25rem); }
+p { line-height: 1.55; }
+header p { margin: .75rem 0 0; max-width: 33rem; }
+.painel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5rem 1rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid #d4cebd;
+    margin-bottom: 1.5rem;
+    color: #4f5c4c;
+    font-size: .95rem;
+    font-weight: 650;
+}
+#alternativas {
+    display: grid;
+    gap: .65rem;
+    margin-top: 1.25rem;
+}
+button {
+    min-height: 3rem;
+    padding: .75rem 1rem;
+    border: 1px solid #7e8a77;
+    border-radius: .5rem;
+    font: inherit;
+    cursor: pointer;
+}
+#alternativas button {
+    text-align: left;
+    color: inherit;
+    background: #fffdf7;
+}
+#alternativas button:enabled:hover { background: #f1eee2; }
+#alternativas button.correta { background: #e1efe0; border-color: #38724d; }
+#alternativas button.incorreta { background: #fae7db; border-color: #995236; }
+button:disabled { cursor: default; opacity: 1; }
+:focus-visible { outline: 3px solid #9b4824; outline-offset: 3px; }
+#resposta { font-weight: 650; }
+.acao {
+    background: #184b40;
+    color: white;
+    border-color: #184b40;
+    font-weight: 650;
+}
+.acao:hover { background: #103b32; }
